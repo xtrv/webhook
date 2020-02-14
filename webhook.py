@@ -13,12 +13,6 @@ def handle(msg):
         pattern=re.search(r'^\*(.*)', msg['text'])
         if pattern:
             bot.sendMessage(-1001149714028, pattern.group(1))
-#        if msg['text'] == '/start':
-#            bot.sendMessage(chat_id, 'سلام چطوری؟')
-#        elif msg['text'] == 'بیشور':
-#            bot.sendMessage(chat_id, 'خودتی')
-#        else:
-#            bot.sendMessage(chat_id, msg['text'])
 
 webhook = OrderedWebhook(bot, handle)
 
